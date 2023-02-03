@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+DocumentRoot /var/www/roundcube
+ServerName webmail.nombreyapellido.com
+<Directory /var/www/roundcube/>
+Options Indexes
+AllowOverride All
+Order allow,deny
+Require all granted
+Allow from all
+</Directory>
+ErrorLog ${APACHE_LOG_DIR}/roundcube_error.log
+CustomLog ${APACHE_LOG_DIR}/roundcube_access.log combined
+</VirtualHost>
